@@ -27,6 +27,7 @@ const relativeFileLoader = (ext = '[ext]') => {
 export default {
   entry: {
     app: [
+      `es6-promise/dist/es6-promise.auto${JSON.stringify(environment) === 'development' ? '.min' : ''}.js`,
       './src/app.js',
     ],
   },
@@ -62,9 +63,30 @@ export default {
         }
       },
       {
-        test: /\.(json|png|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         include: /src/,
         use: relativeFileLoader()
+      },
+      {
+        test: /\.json$/,
+        include: /src/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              useRelativePath: true,
+              name: '[name].[ext]',
+            },
+          },
+          {
+            loader: 'webpack-comment-remover-loader',
+            options: {
+              includePaths: [
+                resolve('src'),
+              ],
+            },
+          },
+        ].filter(Boolean)
       },
       {
         test: /\.(scss|wxss)$/,

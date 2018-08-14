@@ -38,11 +38,13 @@
     "style-loader": "^0.22.1",
     "url-loader": "^1.0.1",
     "webpack": "^3.8.1",
+    "webpack-comment-remover-loader": "0.0.3",
     "wxapp-webpack-plugin": "^0.18.0",
     "wxml-loader": "^0.2.2",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "es6-promise": "^4.2.4",
     "lodash": "^4.17.10"
   }
 }
