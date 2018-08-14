@@ -8,6 +8,7 @@ import { DefinePlugin, EnvironmentPlugin } from 'webpack';
 import webpack from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 const { NODE_ENV } = process.env;
 const environment = NODE_ENV;
@@ -48,8 +49,17 @@ export default {
         test: /\.js$/,
         include: /src/,
         use: [
-          'babel-loader',
+          'babel-loader'
         ].filter(Boolean)
+      },
+      {
+        test: /\.js$/,
+        include: /src/,
+        loader: 'eslint-loader',
+        options: {
+          formatter: require('eslint-friendly-formatter'),
+          emitWarning: true
+        }
       },
       {
         test: /\.(json|png|jpg|gif)$/,
@@ -86,6 +96,7 @@ export default {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new EnvironmentPlugin({
       NODE_ENV: 'development'
     }),

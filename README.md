@@ -2,6 +2,8 @@
 ``````
 运用webpack编译构建小程序
 webpack 3.x.x
+node 8.x.x
+npm 5.x.x
 ``````
 
 # 项目使用说明
@@ -35,4 +37,7 @@ wx-mini
 |---------package.json                    npm初始文件
 |---------README.md                       项目说明文件
 |---------webpack.config.babel.js         项目编译打包配置文件
+|---------.eslintrc                       js代码规范检测配置文件
+|---------.babelrc                        es6转换
+|---------.gitignore                      上传git时，指定的忽略文件
 ``````

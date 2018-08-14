@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/copy/index",
     "pages/index/index"
   ],
   "window":{
