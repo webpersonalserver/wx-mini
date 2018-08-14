@@ -1,15 +1,19 @@
 # wx-mini
+``````
 运用webpack编译构建小程序
 webpack 3.x.x
+``````
 
 # 项目使用说明
+``````
 1、安装项目依赖
   npm install
 2、开发运行项目
   npm run dev
 3、生产编译打包项目
   npm run build
-  
+``````
+
 # 项目目录结构说明
 ``````
 wx-mini
