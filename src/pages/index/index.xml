@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="index-container">
+  <text>Hello Word!</text>
+</view>

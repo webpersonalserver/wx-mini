@@ -1,0 +1,15 @@
+#  文件忽略规则
+#  *.a             忽略所有   .a 结尾的文件
+#  !lib.a          除lib.a文件
+#  /TODO           仅仅忽略项目根目录下的  TODO  文件，不包括  subdir/TODO
+#  build           忽略   build/ 目录下的所有文件
+#  doc/*.txt       忽略doc/notes.txt  ，但不包括  doc/server/arch.txt
+
+# 忽略依赖包
+node_modules
+# 忽略编译打包后的文件
+dist
+# 忽略微信开发者工具生成文件
+package-lock.json
+# 忽略编辑器生成的文件
+.project
