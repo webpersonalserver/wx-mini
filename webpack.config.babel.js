@@ -9,6 +9,7 @@ import webpack from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import uglifyPlugin from 'uglifyjs-webpack-plugin';
 
 const { NODE_ENV } = process.env;
 const environment = NODE_ENV;
@@ -144,7 +145,15 @@ export default {
         '**/*.js'
       ]
     }),
-    new WXAppWebpackPlugin()
+    new WXAppWebpackPlugin(),
+    new uglifyPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_debugger: true,
+        drop_console: true
+      }
+    })
   ],
   watchOptions: {
     ignored: /dist|manifest/,
