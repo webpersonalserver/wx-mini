@@ -1,21 +1,38 @@
 # wx-mini
-``````
-运用webpack编译构建小程序
-webpack 3.x.x
-node 8.x.x
-npm 5.x.x
-gulp 3.x.x
-``````
 
-# 项目使用说明
-``````
-1、安装项目依赖
-  npm install
-2、开发运行项目
-  npm run dev
-3、生产编译打包项目
-  npm run build
-``````
+使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
+
+## 本项目重要开发工具本版说明
+
+* `webpack 3.8.1`
+* `yarn 1.9.4`
+* `node 8.11.1`
+* `npm 5.6.0`
+* `gulp 3.9.1`
+
+## 功能
+
+* 支持引用 `node_modules` 模块
+* 支持通过配置 `alias` 来避免 `../../../` 之类的模块引用
+* 通过 `babel` 支持更丰富的 `ES6` 兼容，包括 `async/await`
+* 内置 `promise` 和 `lodash`（`lodash` 按需引入相应模块，不会全部引入）
+* 使用 `scss` 编写 `.wxss` 文件，内置了一些有用的 `mixins` 和 `extends`
+* 提供 `ENVIRONMENT` 和 `process.env.NODE_ENV` 全局常量辅助开发
+
+## 开始使用
+
+确保安装了 [Node.js](https://nodejs.org/) (>= `v4.2`) 和 [yarn](https://yarnpkg.com) 或 [npm](https://www.npmjs.com/package/npm)
+
+1.  `git clone` 此项目
+2.  通过命令行工具 `cd` 到这个目录，执行`npm install` 或 `yarn` 安装依赖模块
+3.  执行 `npm run dev`或`yarn dev` 开始开发
+4.  通过微信开发者工具，添加 `dist` 目录到项目上
+
+## 内置命令
+
+* 执行命令  `npm install dev`或`yarn dev` 运行项目（不带有压缩项目的功能）
+* 执行命令  `npm install build`或`yarn build` 生产编译打包项目（不带有压缩项目的功能）
+* 执行命令  `npm install minify`或`yarn minify` 生产编译压缩打包运行项目（带有压缩项目的功能）
 
 # 项目目录结构说明
 ``````

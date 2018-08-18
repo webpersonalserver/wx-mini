@@ -49,6 +49,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "es6-promise": "^4.2.4",
     "lodash": "^4.17.10"
   }
