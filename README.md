@@ -1,6 +1,6 @@
 # wx-mini
 
-使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
+使用 `webpack`, `babel`, `scss` 开发的微信小程序项目脚手架
 
 ## 本项目重要开发工具本版说明
 
