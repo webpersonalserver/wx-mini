@@ -4,6 +4,7 @@
 webpack 3.x.x
 node 8.x.x
 npm 5.x.x
+gulp 3.x.x
 ``````
 
 # 项目使用说明
@@ -34,6 +35,7 @@ wx-mini
           |-----------app.js                          小程序主js文件
           |-----------app.json                        小程序主json配置文件
           |-----------app.wxss                        小程序主wxss样式文件
+|---------gulpfile.js                     项目压缩的脚本配置文件
 |---------package.json                    npm初始文件
 |---------README.md                       项目说明文件
 |---------webpack.config.babel.js         项目编译打包配置文件
