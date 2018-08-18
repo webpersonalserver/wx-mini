@@ -46,8 +46,6 @@ module.exports = {
     "eol-last": 1,
     "no-mixed-spaces-and-tabs": 1,
     "no-multiple-empty-lines": 1,
-    "prefer-arrow-callback": 1,
-    "no-console": process.env.NODE_ENV === 'production' ? 1 : 0,
-    "no-debugger": process.env.NODE_ENV === 'production' ? 1 : 0
+    "prefer-arrow-callback": 1
   }
 }
