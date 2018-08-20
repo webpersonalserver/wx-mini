@@ -30,9 +30,9 @@
 
 ## 内置命令
 
-* 执行命令  `npm install dev`或`yarn dev` 运行项目（不带有压缩项目的功能）
-* 执行命令  `npm install build`或`yarn build` 生产编译打包项目（不带有压缩项目的功能）
-* 执行命令  `npm install minify`或`yarn minify` 生产编译压缩打包运行项目（带有压缩项目的功能）
+* 执行命令  `npm run dev`或`yarn dev` 运行项目（不带有压缩项目的功能）
+* 执行命令  `npm run build`或`yarn build` 生产编译打包项目（不带有压缩项目的功能）
+* 执行命令  `npm run minify`或`yarn minify` 生产编译压缩打包运行项目（带有压缩项目的功能）
 
 # 项目目录结构说明
 ``````
@@ -58,5 +58,5 @@ wx-mini
 |---------webpack.config.babel.js         项目编译打包配置文件
 |---------.eslintrc                       js代码规范检测配置文件
 |---------.babelrc                        es6转换
-|---------.gitignore                      上传git时，指定的忽略文件
+|---------.gitignore                      上传git时，指定忽略上传文件的配置文件
 ``````
