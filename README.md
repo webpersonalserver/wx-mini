@@ -18,6 +18,7 @@
 * 内置 `promise` 和 `lodash`（`lodash` 按需引入相应模块，不会全部引入）
 * 使用 `scss` 编写 `.wxss` 文件，内置了一些有用的 `mixins` 和 `extends`
 * 提供 `ENVIRONMENT` 和 `process.env.NODE_ENV` 全局常量辅助开发
+* 支持 `eslint` 基础代码检测
 
 ## 开始使用
 
