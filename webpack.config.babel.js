@@ -132,7 +132,8 @@ export default {
       },
       {
         from: __dirname + '/src/components',
-        to: __dirname + '/dist/components'
+        to: __dirname + '/dist/components',
+        ignore: ['*/*.xml']
       },
       {
         from: '**/*.wxml',
