@@ -115,6 +115,24 @@ export default {
             }
           }
         ]
+      },
+      {
+        test: /\.wxs$/,
+        include: /src/,
+        exclude: /node_modules/,
+        use: [
+          relativeFileLoader('wxs'),
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: [
+                'es2015', 
+                'stage-0'
+              ]
+            }
+          }
+        ]
       }
     ]
   },
@@ -139,6 +157,10 @@ export default {
         from: '**/*.wxml',
         to: 'pages',
         context: path.join(__dirname, 'src/pages')
+      },
+      {
+        from: __dirname + '/src/wxs',
+        to: __dirname + '/dist/wxs'
       }
     ], {
       ignore: [
