@@ -1,0 +1,87 @@
+<!-- 通用input组件 -->
+<view class="commonInput">
+  <form bindreset="clearCommonInput">
+    <view class="commonInput__content">
+      <block wx:if="{{type === 'tel'}}">
+        <input class="commonInput__content_input"
+          type="number"
+          maxlength="11"
+          confirm-type="done"
+          placeholder="{{placeholder}}"
+          placeholder-class="commonInput__content_input-placeholder"
+          value="{{value}}"
+          focus="{{valueFocus}}"
+          bindfocus="emitValueFocus"
+          bindblur="emitValueBlur"
+          bindinput="emitValueInput"/>
+        <view class="commonInput__content_clear" wx:if="{{valueClear && hasClearIcon}}">
+          <button form-type="reset"></button>
+          <image src="/images/common/icon_clear.png" mode="scaleToFill" class="commonInput__content_clear-img"></image>
+        </view>
+      </block>
+      <block wx:elif="{{type === 'captcha'}}">
+        <input class="commonInput__content_input"
+          type="text"
+          maxlength="4"
+          confirm-type="done"
+          placeholder="{{placeholder}}"
+          placeholder-class="commonInput__content_input-placeholder"
+          value="{{captchaValue}}"
+          focus="{{valueFocus}}"
+          bindfocus="emitValueFocus"
+          bindblur="emitValueBlur"
+          bindinput="emitValueInput"/>
+        <image src="{{captchaUrl}}" mode="scaleToFill" class="commonInput__content_captcha" bindtap="getCaptchaUrl"></image>
+      </block>
+      <block wx:elif="{{type === 'sms'}}">
+        <input class="commonInput__content_input"
+          type="number"
+          maxlength="4"
+          confirm-type="done"
+          placeholder="{{placeholder}}"
+          placeholder-class="commonInput__content_input-placeholder"
+          value="{{value}}"
+          focus="{{valueFocus}}"
+          bindfocus="emitValueFocus"
+          bindblur="emitValueBlur"
+          bindinput="emitValueInput"/>
+          <view class="commonInput__content_sms" bindtap="getSmsCode">{{smsText}}</view>
+      </block>
+      <block wx:elif="{{type === 'text'}}">
+        <input class="commonInput__content_input"
+          type="text"
+          confirm-type="done"
+          placeholder="{{placeholder}}"
+          placeholder-class="commonInput__content_input-placeholder"
+          value="{{value}}"
+          focus="{{valueFocus}}"
+          bindfocus="emitValueFocus"
+          bindblur="emitValueBlur"
+          bindinput="emitValueInput"/>
+        <view class="commonInput__content_clear" wx:if="{{valueClear && hasClearIcon}}">
+          <button form-type="reset"></button>
+          <image src="/images/common/icon_clear.png" mode="scaleToFill" class="commonInput__content_clear-img"></image>
+        </view>
+      </block>
+      <block wx:elif="{{type === 'password'}}">
+        <input class="commonInput__content_input"
+          type="text"
+          maxlength="16"
+          minlength="6"
+          password="true"
+          confirm-type="done"
+          placeholder="{{placeholder}}"
+          placeholder-class="commonInput__content_input-placeholder"
+          value="{{value}}"
+          focus="{{valueFocus}}"
+          bindfocus="emitValueFocus"
+          bindblur="emitValueBlur"
+          bindinput="emitValueInput"/>
+        <view class="commonInput__content_clear" wx:if="{{valueClear && hasClearIcon}}">
+          <button form-type="reset"></button>
+          <image src="/images/common/icon_clear.png" mode="scaleToFill" class="commonInput__content_clear-img"></image>
+        </view>
+      </block>
+    </view>
+  </form>
+</view>

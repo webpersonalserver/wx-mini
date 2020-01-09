@@ -1,0 +1,67 @@
+/**index.wxss**/
+@import 'src/utils/common.scss';
+
+.commonInput {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &__content{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &_input {
+      flex: 1;
+      height: 60rpx;
+      color: #333;
+      font-size: 45rpx;
+      text-align: left;
+      line-height: 60rpx;
+
+      &-placeholder{
+        font-size: 36rpx;
+        font-weight: 200;
+      }
+    }
+    &_clear{
+      width: 60rpx;
+      height: 60rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  
+      button::after {
+        border: none !important;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      &-img{
+        width: 32rpx;
+        height: 32rpx;
+      }
+    }
+    &_captcha{
+      width: 140rpx;
+      height: 60rpx;
+    }
+    &_sms{
+      width: 220rpx;
+      line-height: 44rpx;
+      color: $primary;
+      font-size: 34rpx;
+      text-align: center;
+    }
+  }
+}

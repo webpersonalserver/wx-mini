@@ -1,0 +1,12 @@
+// 处理时间，例如：0 ==> '00'
+var formatDate = function (e) {
+  if (e > 9) {
+    return e
+  } else {
+    return '0' + e
+  }
+}
+
+module.exports = {
+  formatDate: formatDate
+}
